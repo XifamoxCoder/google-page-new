@@ -22,3 +22,7 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+
+reset.css
+style.css
+style.css.map

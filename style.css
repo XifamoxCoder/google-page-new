@@ -18,15 +18,17 @@ html, body {
 .header {
   display: flex;
   justify-content: end;
+  height: 60px;
+  align-items: center;
 }
 
 .header__link {
   display: flex;
   align-items: center;
   margin-right: 5px;
-  margin-top: 15px;
 }
-.header__link .header__block:hover {
+
+.header__block:hover {
   background-color: #36393d;
 }
 
@@ -36,7 +38,8 @@ html, body {
   color: #fff;
   text-decoration: none;
 }
-.header__text:hover {
+
+a:hover {
   text-decoration: underline;
 }
 
@@ -74,12 +77,31 @@ html, body {
 }
 
 .form__box {
+  position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: row;
 }
-.form__box .form__input {
+
+.form__box-text {
+  display: flex;
+  position: absolute;
+  resize: none;
+  overflow: hidden;
+  outline: none;
+  height: 20px;
+  width: 400px;
+  top: 50%;
+  margin-right: 45px;
+  transform: translate(0, 50%);
+  color: white;
+}
+.form__box-text:focus + .form__input {
+  background-color: #303134;
+}
+
+.form__input {
   margin-top: 5vh;
   display: flex;
   align-items: center;
@@ -93,28 +115,25 @@ html, body {
   color: #fff;
   background-color: transparent;
 }
-.form__box .form__input:hover {
+.form__input:hover {
   background-color: #303134;
 }
-.form__box .form__input .form__input-text {
-  resize: none;
-  overflow: hidden;
-  outline: none;
-  height: 20px;
-  width: 400px;
-}
-.form__box .form__input-img {
+
+.form__input-img {
   width: 20px;
   height: 20px;
 }
-.form__box .form__left {
+
+.form__input-img--left {
   margin: 0px 10px 0px 20px;
 }
-.form__box .form__right {
+
+.form__right {
   display: flex;
   margin: 0px 10px 0px 10px;
 }
-.form__box .form__input-img {
+
+.form__input-img {
   margin-right: 10px;
 }
 
@@ -123,12 +142,14 @@ html, body {
   display: flex;
   justify-content: center;
 }
-.button .button__container {
+
+.button__container {
   display: flex;
   justify-content: center;
   width: 33%;
 }
-.button .button__container .button__item {
+
+.button__item {
   margin: 11px 4px;
   padding: 8px 16px;
   background-color: #303134;
@@ -137,31 +158,35 @@ html, body {
   height: 36px;
   min-width: 54px;
 }
-.button .button__container .button__item .button__text {
+.button__item:hover {
+  border: 1px solid #5f6368;
+}
+
+.button__text {
   color: #e8eaed;
   font-size: 14px;
-}
-.button .button__container .button__item:hover {
-  border: 1px solid #5f6368;
 }
 
 .footer {
   background-color: #171717;
 }
-.footer .footer__up {
+
+.footer__up {
   width: 100%;
   padding: 15px 30px;
   border-bottom: 1px solid #3c4043;
 }
-.footer .footer__up .footer__up-text {
+
+.footer__up-text {
   margin-right: 15px;
   color: #999da2;
   font-size: 15px;
 }
-.footer .footer__up .footer__up-text:hover {
+.footer__up-text:hover {
   text-decoration: underline;
 }
-.footer .footer__down {
+
+.footer__down {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -170,36 +195,41 @@ html, body {
   align-items: center;
   padding: 0px 20px;
 }
-.footer .footer__down .footer__down-left {
+
+.footer__down-left {
   display: flex;
   min-width: 30%;
   justify-content: flex-start;
   margin-left: 20px;
 }
-.footer .footer__down .footer__down-center .footer__down-center-img {
+
+.footer__down-center-img {
   width: 12px;
   height: 14px;
   margin-right: 5px;
 }
-.footer .footer__down .footer__down-center .footer__down-text-center {
+
+.footer__down-text-center {
   display: flex;
   color: #999da2;
   font-size: 14px;
 }
-.footer .footer__down .footer__down-center .footer__down-text-center:hover {
+.footer__down-text-center:hover {
   text-decoration: underline;
 }
-.footer .footer__down .footer__down-right {
+
+.footer__down-right {
   display: flex;
   min-width: 30%;
   justify-content: flex-end;
 }
-.footer .footer__down .footer__down-text {
+
+.footer__down-text {
   margin-right: 25px;
   color: #999da2;
   font-size: 14px;
 }
-.footer .footer__down .footer__down-text:hover {
+.footer__down-text:hover {
   text-decoration: underline;
 }
 
